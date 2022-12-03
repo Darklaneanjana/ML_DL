@@ -131,4 +131,5 @@ dmypy.json
 **/logs/
 *.csv
 *.zip
+*.paruqet
 kaggle.json
