@@ -132,4 +132,5 @@ dmypy.json
 *.csv
 *.zip
 *.paruqet
+*.wav
 kaggle.json
