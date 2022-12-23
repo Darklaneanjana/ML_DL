@@ -134,3 +134,7 @@ dmypy.json
 *.paruqet
 *.wav
 kaggle.json
+
+*.pkl
+wandb/
+.model
