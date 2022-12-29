@@ -139,3 +139,6 @@ kaggle.json
 wandb/
 .model
 *.feather
+
+*.jpg
+*.jpg
