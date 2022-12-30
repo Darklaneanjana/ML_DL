@@ -11,11 +11,6 @@ model = tf.keras.models.load_model('/models/1')
 class_names = ['Early blight', 'Late blight', 'Healthy']
 
 
-@app.get('/ping')
-async def ping():
-    return {'ping': 'poong'}
-
-
 def load_image(image_bytes):
     image = np.array(Image.open(BytesIO(image_bytes)))
     return image
@@ -28,7 +23,7 @@ async def predict(file: UploadFile = File(...)):
     image = tf.expand_dims(image, 0)
     predictions = model.predict(image)
 
-    return {'confidence': float(np.max(predictions)), 'class': class_names[np.argmax(predictions)]}
+    return {'confidence': np.round( float(np.max(predictions)),4), 'class': class_names[np.argmax(predictions)]}
 
 
 if __name__ == '__main__':
