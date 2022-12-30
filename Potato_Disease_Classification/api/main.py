@@ -21,6 +21,8 @@ async def predict(file: UploadFile = File(...)):
 
     image = load_image(await file.read())
     image = tf.expand_dims(image, 0)
+    image = tf.image.resize(image, (256, 256))
+
     predictions = model.predict(image)
 
     return {'confidence': np.round( float(np.max(predictions)),4), 'class': class_names[np.argmax(predictions)]}
