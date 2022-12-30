@@ -142,3 +142,5 @@ wandb/
 
 *.jpg
 *.jpg
+
+models/
