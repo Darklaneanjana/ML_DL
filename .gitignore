@@ -141,6 +141,7 @@ wandb/
 *.feather
 
 *.jpg
+*.jfif
 *.jpg
 
 models/
