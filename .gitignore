@@ -140,8 +140,9 @@ wandb/
 .model
 *.feather
 
+*.png
 *.jpg
 *.jfif
-*.jpg
+*.jpeg
 
 models/
