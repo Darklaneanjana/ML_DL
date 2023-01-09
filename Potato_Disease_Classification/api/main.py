@@ -6,8 +6,9 @@ from fastapi import FastAPI, File, UploadFile
 from uvicorn import run
 app = FastAPI()
 
-
-model = tf.keras.models.load_model('/models/1')
+import os
+model_path = os.path.join(os.getcwd(), 'models')
+model = tf.keras.models.load_model(model_path+'/1')
 class_names = ['Early blight', 'Late blight', 'Healthy']
 
 
