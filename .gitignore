@@ -146,3 +146,6 @@ wandb/
 *.jpeg
 
 models/
+.vscode/settings.json
+k/news-headlines-dataset-for-sarcasm-detection/Sarcasm_Headlines_Dataset.json
+*.json
